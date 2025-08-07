@@ -1,0 +1,33 @@
+extends ../layout/index
+
+block content
+    .py-10
+        h1.text-4xl.my-10.font-extrabold.text-center Baula
+            span.font-normal Rentals
+        h2.text-center.text-2xl.font-extrabold=pagina
+
+        .mt-8.mx-auto.max-w-md
+            .bg-white.py-8.px-4.shadow
+                form.space-y-5(method="POST" action="/auth/registro")
+                    div 
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="nombre") Tu nombre
+                        input#nombre.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="¿Cuál es tu nombre?" type="text" name="nombre")
+
+                    div 
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="email") Email de registro
+                        input#email.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="¿Cuál es tu email?" type="email" name="email")
+
+                    div 
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="password") Contraseña
+                        input#password.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Digita una contraseña" type="password" name="password")
+                    
+                    div 
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="repetir_password") Repite tu contraseña
+                        input#repetir_password.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Confirma tu contraseña" type="password" name="repetir_password")
+
+                    div.flex.items-center.justify-between
+                        a.text-gray-500.text-xs(href="/auth/login") ¿Ya tienes una cuenta?
+                        a.text-gray-500.text-xs(href="/auth/olvide-password") Olvidé mi contraseña
+
+                    input(class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-md py-3 cursor-pointer" type="submit" value="Crear cuenta")
+

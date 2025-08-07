@@ -1,0 +1,26 @@
+extends ../layout/index
+
+block content
+    .py-10
+        h1.text-4xl.my-10.font-extrabold.text-center Baula
+            span.font-normal Rentals
+        h2.text-center.text-2xl.font-extrabold=pagina
+
+        .mt-8.mx-auto.max-w-md
+            .bg-white.py-8.px-4.shadow
+                form.space-y-5
+
+                    div 
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="email") Email
+                        input#email.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Digita es tu email" type="email" name="email")
+
+                    div 
+                        label.block.text-sm.uppercase.text-gray-500.mb-2.font-bold(for="password") Contraseña
+                        input#password.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Digita tu contraseña" type="password" name="password")
+                    
+                    div.flex.items-center.justify-between
+                        a.text-gray-500.text-xs(href="/auth/registro") Crea tu cuenta ahora
+                        a.text-gray-500.text-xs(href="/auth/olvide-password") Olvidé mi contraseña
+
+                    input(class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-md py-3 cursor-pointer" type="submit" value="Iniciar sesión")
+

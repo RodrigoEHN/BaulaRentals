@@ -177,8 +177,7 @@ const confirmar = async (req, res) => {
 
 }
 
-
-
+//Formulario recuperar contrasena
 const  formularioOlvidePassword = (req, res) => {
     res.render('auth/olvide-password' , {
         pagina: '¿Olvidaste tu contraseña?',

@@ -6,7 +6,12 @@ html(lang="es")
         title BaulaRentals | #{pagina}
         link(rel="stylesheet", href="/css/output.css")
         link(rel="icon", href="/favicon.png")
+        block styles
     body.min-h-screen.bg-gray-50
+        if barra
+            include header
 
         main(class="mx-auto container mt-10 px-2")
             block content
+
+        block scripts

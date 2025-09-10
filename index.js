@@ -2,6 +2,7 @@ import express from 'express'
 import csrf from 'csurf'
 import cookieParser from 'cookie-parser'
 import userRoutes from './routes/userRoutes.js'
+import propiedadesRoutes from './routes/propiedadesRoutes.js'
 import db from './config/db.js'
 
 //App
@@ -27,6 +28,7 @@ try {
 
 //Routing
 app.use('/auth', userRoutes)
+app.use('/', propiedadesRoutes)
 
 //Pug
 app.set('view engine', 'pug')

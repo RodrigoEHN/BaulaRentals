@@ -10,7 +10,9 @@
     "server": "nodemon index,js",
     "css": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch",
     "js": "webpack --watch",
-    "dev" : "concurrently \"npm run css\" \"npm run js\"  "
+    "dev" : "concurrently \"npm run css\" \"npm run js\"  ",
+    "db:importar" : "node ./seed/seeder.js -i",
+    "db:eliminar" : "node ./seed/seeder.js -e"
   },
   "keywords": [
     "MVC",

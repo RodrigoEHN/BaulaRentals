@@ -1,7 +1,7 @@
 (function() {
 
-    const lat = 9.9382791;
-    const lng = -84.103193;
+    const lat = document.querySelector('#lat').value || 9.9382791;
+    const lng = document.querySelector('#lng').value || -84.103193;
     const mapa = L.map('mapa').setView([lat, lng ], 16);
     let marker;
 
@@ -33,7 +33,7 @@
             marker.bindPopup(result.address.Match_addr)
 
         //Llenar los campos
-            document.querySelector('.calle').textContent = result?.address?.Match_addr?.Address ?? '';
+            document.querySelector('.calle').textContent = result?.address?.Address ?? '';
             document.querySelector('#calle').value = result?.address?.Address ?? '';
             document.querySelector('#lat').value = result?.latlng?.lat ?? '';
             document.querySelector('#lng').value = result?.latlng?.lng ?? '';

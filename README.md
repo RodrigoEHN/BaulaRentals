@@ -1,25 +1,28 @@
 # Baula Rentals
 
-Baula Rentals is a monolithic real estate web application built using an MVC architecture pattern. The project focuses on backend structure, reusable middleware, and server-side rendering using Pug.
+Baula Rentals is a monolithic real estate web application built using an MVC architecture pattern with server-side rendering and JWT-based authentication.
+
+The project focuses on backend structure, reusable middleware, secure route handling, and clean separation of concerns.
 
 ## Architecture
 
 The application follows a traditional MVC pattern:
 
-- Models: Handle database logic and data structure
-- Controllers: Manage request handling and business logic
+- Models: Manage database interaction and data structure
+- Controllers: Handle request logic and business rules
 - Views: Rendered using Pug templating
-- Middleware: Reusable request validation and authentication logic
+- Middleware: Reusable validation and authentication logic
 
-This structure helps maintain clear separation of concerns and scalable organization as the project grows.
+Authentication is implemented using JWT tokens, protecting routes and validating user sessions securely.
 
 ## Features
 
-- Server-side rendered views using Pug
-- Structured routing and controller separation
+- MVC project structure
+- Server-side rendering with Pug
+- JWT authentication and protected routes
 - Reusable middleware functions
-- Database models for property management
-- Modular project organization
+- Structured routing and controller separation
+- Database integration for property management
 
 ## Tech Stack
 
@@ -27,12 +30,13 @@ Backend:
 - Node.js
 - Express.js
 - MVC Architecture
-- Pug (template engine)
+- JWT Authentication
+- Pug (Template Engine)
 
 Database:
-- (MongoDB / SQL — specify which one)
+MongoDB
 
 ## Project Status
 
-Currently under active development. Additional features such as authentication and advanced property filtering are being implemented.
+Currently under active development. Additional modules such as property filtering, admin management and deployment configuration are being implemented.
 
